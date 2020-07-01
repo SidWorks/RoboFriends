@@ -7,18 +7,18 @@ import "./App.css";
 
 import { setSearchField } from "../actions";
 
-const mapStateToProps = (state) => {
+function mapStateToProps(state) {
   // connect() args1
   return {
     searchField: state.searchField,
   };
-};
+}
 
-const mapDispatchToProps = (dispatch) => {
+function mapDispatchToProps(dispatch) {
   return {
     onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
   };
-};
+}
 
 class App extends Component {
   constructor() {
